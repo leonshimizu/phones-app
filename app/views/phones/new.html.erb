@@ -1,0 +1,8 @@
+<h1>Add New Phone</h1>
+
+<%= form_tag "/phones", method: :post do %>
+  <p>Maker: <input type="text" name="maker"></p>
+  <p>Version: <input type="number" name="version"></p>
+  <p>Color: <input type="text" name="color"></p>
+  <input type="submit" value="Add New Phone">
+<% end %>
