@@ -1,7 +1,7 @@
 <h1>In the Phones Index</h1>
 
 <% @phones.each do |phone|%>
-  <p>Maker: <%= phone.maker %></p>
+  <p>Maker: <a href="/phones/<%= phone.id %>"><%= phone.maker %></a></p>
   <p>Version: <%= phone.version %></p>
   <p>Color: <%= phone.color %></p>
   <hr>
