@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lens_size: 1
+  description: MyString
+  mega_pixels: 1.5
+
+two:
+  lens_size: 1
+  description: MyString
+  mega_pixels: 1.5

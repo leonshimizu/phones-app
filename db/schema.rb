@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_30_030945) do
+ActiveRecord::Schema.define(version: 2021_12_01_012132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cameras", force: :cascade do |t|
+    t.integer "lens_size"
+    t.string "description"
+    t.float "mega_pixels"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "phones", force: :cascade do |t|
     t.string "maker"

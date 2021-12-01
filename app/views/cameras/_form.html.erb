@@ -1,0 +1,32 @@
+<%= form_with(model: camera) do |form| %>
+  <% if camera.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(camera.errors.count, "error") %> prohibited this camera from being saved:</h2>
+
+      <ul>
+        <% camera.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :lens_size %>
+    <%= form.number_field :lens_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mega_pixels %>
+    <%= form.text_field :mega_pixels %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
